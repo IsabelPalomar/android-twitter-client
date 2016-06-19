@@ -1,4 +1,4 @@
-package io.androidblog.twitterclient;
+package io.androidblog.twitterclient.login.ui;
 
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
@@ -15,7 +15,8 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import io.androidblog.twitterclient.main.MainActivity;
+import io.androidblog.twitterclient.R;
+import io.androidblog.twitterclient.main.ui.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -59,6 +60,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateToMainScreen() {
-        startActivity(new Intent(this, MainActivity.class));
+        Twitter.logOut();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                | Intent.FLAG_ACTIVITY_NEW_TASK
+                | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }
