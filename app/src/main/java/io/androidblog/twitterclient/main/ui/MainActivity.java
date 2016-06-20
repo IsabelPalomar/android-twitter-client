@@ -15,7 +15,7 @@ import com.twitter.sdk.android.Twitter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.androidblog.twitterclient.hashtags.HashtagsFragment;
-import io.androidblog.twitterclient.images.ImagesFragment;
+import io.androidblog.twitterclient.images.ui.ImagesFragment;
 import io.androidblog.twitterclient.login.ui.LoginActivity;
 import io.androidblog.twitterclient.R;
 import io.androidblog.twitterclient.main.ui.adapters.MainSectionsPagerAdapter;
